@@ -1,0 +1,6 @@
+movies-datasource:
+  driver: "org.postgresql.Driver"
+  connection-string: "jdbc:postgresql://\
+    ${MOVIES_DB_CLUSTER_SERVICE_HOST}:${MOVIES_DB_CLUSTER_SERVICE_PORT_POSTGRESQL}\
+    /movies"
+  credentials: "/etc/movies-db"

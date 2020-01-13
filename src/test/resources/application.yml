@@ -1,0 +1,10 @@
+movies-datasource:
+  driver: "org.postgresql.Driver"
+  connection-string: "jdbc:postgresql://127.0.0.1:5432/movies"
+  credentials: "src/test/resources/creds"
+logging:
+  level:
+    org:
+      springframework:
+        jdbc:
+          core: TRACE
