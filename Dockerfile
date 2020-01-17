@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openjdk:11-jre-slim
 
 COPY target/*.jar /usr/app/app.jar
 WORKDIR /usr/app
