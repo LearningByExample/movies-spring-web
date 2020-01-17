@@ -2,14 +2,14 @@
 
 set -o errexit
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 1 ]; then
   echo "Illegal number of parameters, usage : "
   echo " "
-  echo "  $0 <k8-deployment-name> <replicas>"
+  echo "  $0 <replicas>"
   echo " "
   echo " examples: "
-  echo "  - $0 my-deployment 5"
-  echo "  - $0 my-deployment 0"
+  echo "  - $0 5"
+  echo "  - $0 0"
   exit 2
 fi
 
@@ -18,8 +18,8 @@ if [ -x "$(command -v microk8s.kubectl)" ]; then
   KUBECMD="microk8s.kubectl"
 fi
 
-DEPLOYMENT_NAME="$1"
-WANTED_REPLICAS="$2"
+DEPLOYMENT_NAME="movies-spring-web"
+WANTED_REPLICAS="$1"
 REPLICAS="0"
 PREVIOUS_REPLICAS="-1"
 
