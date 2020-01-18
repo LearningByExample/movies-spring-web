@@ -14,4 +14,4 @@ COPY --from=builder /app/app.jar /app/app.jar
 
 WORKDIR /app
 
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /app/app.jar"]

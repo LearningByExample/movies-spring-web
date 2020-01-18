@@ -22,6 +22,9 @@ spec:
           imagePullPolicy: Always
           name: movies-spring-web
           resources: {}
+          env:
+            - name: "JAVA_OPTS"
+              value: "-XX:+UseParallelGC -Xms1g -Xmx1g"
           readinessProbe:
             httpGet:
               path: /actuator/health
