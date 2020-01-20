@@ -30,8 +30,8 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${__P(SERVICE_CLUSTER_IP)}</stringProp>
-          <stringProp name="HTTPSampler.port">${__P(SERVICE_PORT)}</stringProp>
+          <stringProp name="HTTPSampler.domain">${__P(TEST_IP)}</stringProp>
+          <stringProp name="HTTPSampler.port">${__P(TEST_PORT)}</stringProp>
           <stringProp name="HTTPSampler.protocol"></stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">${__P(TEST_URL)}</stringProp>

@@ -24,7 +24,9 @@ spec:
           resources: {}
           env:
             - name: "JAVA_OPTS"
-              value: "-XX:+UseParallelGC -Xms1g -Xmx1g"
+              value: >-
+                -Xms250m
+                -Xmx450m
           readinessProbe:
             httpGet:
               path: /actuator/health
