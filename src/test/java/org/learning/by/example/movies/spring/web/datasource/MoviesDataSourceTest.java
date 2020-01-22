@@ -13,6 +13,11 @@ class MoviesDataSourceTest {
         dataSourceProperties.setConnectionString("jdbc:postgresql://127.0.0.1:5432/movies");
         dataSourceProperties.setCredentials("src/test/resources/creds");
         dataSourceProperties.setDriver("org.postgresql.Driver");
+        dataSourceProperties.setReadOnly(false);
+        final DataSourceProperties.PoolConfig pool = new DataSourceProperties.PoolConfig();
+        pool.setMinConnections(1);
+        pool.setMaxConnections(3);
+        dataSourceProperties.setPool(pool);
 
         final MoviesDataSource dataSource = new MoviesDataSource(dataSourceProperties);
         assertThat(dataSource).isNotNull();
