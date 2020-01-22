@@ -8,6 +8,7 @@ movies-datasource:
     max-connections : 3
 logging:
   level:
+    ROOT: DEBUG
     org:
       springframework:
         jdbc:
